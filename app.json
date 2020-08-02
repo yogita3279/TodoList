@@ -4,6 +4,7 @@
     "slug": "TodoList",
     "version": "1.0.0",
     "orientation": "portrait",
+    "description":"It is a simple notepad app which adds the note in the form of list, where user can add or delete their note from the list along with current date and time",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
