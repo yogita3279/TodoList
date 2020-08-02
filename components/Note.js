@@ -11,14 +11,12 @@ export default class AddNote extends React.Component {
 render(){
   return (
       <View key={this.props.keyval} style={styles.note}>
-          <Text style={styles.noteText} >{this.props.val.date}</Text>
-          <Text >{this.props.val.note}</Text>
-
+          <Text style={styles.noteText} >{this.props.keyval.date}</Text>
+          <Text style={styles.noteText}>{this.props.keyval.currentTime}</Text>
+          <Text style={styles.noteText}>{this.props.keyval.note}</Text>
           <TouchableOpacity onPress={this.props.deleteMethod} style={styles.noteDelete}>
-              <Text style={styles.noteDeleteText}>Delete</Text>
+          <Text style={styles.noteDeleteText}>Delete</Text>
           </TouchableOpacity>
-
-
       </View>
     
   );

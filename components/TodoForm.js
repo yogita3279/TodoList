@@ -51,12 +51,25 @@ render(){
 
 }
 
+
+
 addNote(){
   if(this.state.noteText){
     var d= new Date ();
-    this.state.noteArray.push({
-      'date':d.getFullYear() + "/" +(d.getMonth()+1) + "/" +d.getDate(),
-      'note':this.state.noteText
+    var duration= d.getTime();
+    var milliseconds = parseInt((duration%1000)/100)
+    , seconds = parseInt((duration/1000)%60)
+    , minutes = parseInt((duration/(1000*60))%60)
+    , hours = (d.getHours()%12);
+
+      hours = (hours < 10) ? "0" + hours : hours;
+      minutes = (minutes < 10) ? "0" + minutes : minutes;
+      seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+        this.state.noteArray.push({
+      'date':"Date : "+d.getFullYear() + "/" +(d.getMonth()+1) + "/" +d.getDate(),
+      'currentTime':`Time :  ${hours} :${minutes}:${seconds}`,
+      'note':"Note : " +this.state.noteText
     });
   
     this.setState({noteArray:this.state.noteArray});
@@ -77,7 +90,7 @@ const styles = StyleSheet.create({
    flex:1,
   },
   header:{
-    backgroundColor:'#E91E63',
+    backgroundColor:'#FF3399',
     alignItems:'center',
     justifyContent:'center',
     borderBottomWidth:10,
@@ -118,7 +131,7 @@ const styles = StyleSheet.create({
     alignItems:'center',
     justifyContent:'center',
     elevation:8,
-    backgroundColor:'#E91E63'
+    backgroundColor:'#FF3399'
   },
   addButtonText:{
     color:'#fff',
