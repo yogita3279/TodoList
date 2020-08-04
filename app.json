@@ -3,9 +3,10 @@
     "name": "TodoList",
     "slug": "TodoList",
     "version": "1.0.0",
+    "platforms":["ios","android"],
     "orientation": "portrait",
     "description":"It is a simple notepad app which adds the note in the form of list, where user can add or delete their note from the list along with current date and time",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/splash.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -19,6 +20,9 @@
     ],
     "ios": {
       "supportsTablet": true
+    },
+    "android":{
+      "package": "com.yogita3279.TodoList"
     },
     "web": {
       "favicon": "./assets/favicon.png"

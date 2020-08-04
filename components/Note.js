@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
       paddingLeft:20,
       paddingRight:100,
       borderBottomWidth:2,
-      borderBottomColor:'#ededed'
+      borderBottomColor:'#7CFC00'
   },
   noteText:{
       paddingLeft:30,
